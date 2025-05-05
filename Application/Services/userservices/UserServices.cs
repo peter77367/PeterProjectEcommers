@@ -25,7 +25,7 @@ namespace Application.Services.userservices
 
             var user = new User
             {
-              //  UserID = Guid.NewGuid(),
+                UserID = Guid.NewGuid(),
                 Username = dto.Username,
                 PasswordHash = dto.Password,
                 Email = dto.Email,

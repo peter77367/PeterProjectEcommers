@@ -24,6 +24,7 @@ namespace Models
         public DateTime? DateProcessed { get; set; }
 
         public User User { get; set; }
+
         public ICollection<OrderDetail> OrderDetails { get; set; }
     }
 }

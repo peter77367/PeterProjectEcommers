@@ -42,7 +42,7 @@ namespace Application.Services.ProductServices
 
             product.Name = dto.Name;
             product.Price = dto.Price;
-        //    product.Quantity = dto.Quantity;
+         //  product. = dto.Quantity;
          //   product.CategoryID = dto.CategoryID;
 
             _unitOfWork.Products.Update(product);
