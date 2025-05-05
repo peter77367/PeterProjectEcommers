@@ -25,11 +25,14 @@ namespace Application.Services.ProductServices
         {
             var product = new Product
             {
-               // ProductID = Guid.NewGuid(),
+                // ProductID = Guid.NewGuid
+             //   ProductID = dto.ProductID,
                 Name = dto.Name,
                 Price = dto.Price,
+                // Description = dto.Description,
+
                 //  Quantity = dto.Quantity,
-              //  CategoryID = dto.CategoryID
+                //  CategoryID = dto.CategoryID
             };
             await _unitOfWork.Products.AddAsync(product);
             await _unitOfWork.SaveAsync();
