@@ -10,6 +10,6 @@ namespace DTOs
     {
         public Guid UserId { get; set; }
         public DateTime OrderDate { get; set; } = DateTime.UtcNow;
-        public decimal TotalAmount { get; set; }  // يمكن حسابه من OrderDetails
+        public decimal TotalAmount { get; set; }  
     }
 }

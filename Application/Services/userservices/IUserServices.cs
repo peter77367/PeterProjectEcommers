@@ -11,5 +11,7 @@ namespace Application.Services.userservices
     {
         Task<bool> RegisterAsync(UserRegisterDto dto);
         Task<User?> LoginAsync(string username, string password);
+
+        Task<User> GetByUsernameAsync(string username);
     }
 }

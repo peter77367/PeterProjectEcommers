@@ -42,6 +42,11 @@ namespace Application.Services.userservices
         {
             return await _unitOfWork.Users.LoginAsync(username, password);
         }
+
+        public async Task<User> GetByUsernameAsync(string username)
+        {
+            return await _unitOfWork.Users.GetAsync(u => u.Username == username);
+        }
     }
 
 }

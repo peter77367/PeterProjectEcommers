@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq.Expressions;
 using Application.Contracts;
 using Context;
 using Microsoft.EntityFrameworkCore;
@@ -39,6 +40,11 @@ namespace Infrastructrure
         public void Delete(T entity)
         {
             _dbSet.Remove(entity);
+        }
+
+        public async Task<T> GetAsync(Expression<Func<T, bool>> predicate)
+        {
+            return await _context.Set<T>().FirstOrDefaultAsync(predicate);
         }
     }
 }
